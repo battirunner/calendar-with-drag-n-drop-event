@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import Calender from './pages/calendar.js';
+// import logo from './logo.svg';
+// import './App.css';
+import Calender from "../components/calender";
+
 function App() {
   return (
     <div className="App">
