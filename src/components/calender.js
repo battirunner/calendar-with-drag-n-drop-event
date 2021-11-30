@@ -1,6 +1,24 @@
 import react from 'react';
 
 function Calender() {
+  const headerData = ['project', 'test-scope', 'week-21.20', 'week-21.21', 'week-21.22', 'week-21.23', 'week-21.24'];
+  const rowData = [
+    {
+      data1: 'Indiana',
+      data2: 'Indianapolis',
+      data3: 'Mexico'
+    },
+    {
+      data1: 'Ohio',
+      data2: 'Columbus',
+      data3: 'iowa'
+    },
+    {
+      data1: 'Michigan',
+      data2: 'Detroit',
+      data3: 'texas'
+    },
+  ];
   return (
     <>
       <header className="App-header">
@@ -20,45 +38,28 @@ function Calender() {
         </div>
         <div className="w-4/5">
           check
-          <table className="border-collapse border border-red-400 w-4/5 mx-auto">
+          <table className="border-collapse border border-red-400 w-4/5 mx-auto bg-white text-black">
             <thead>
               <tr>
-                <th class="border border-green-600">State</th>
-                <th class="border border-green-600">
-                  <tr className="w-1/4">
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                    <td className="border border-green-600">df</td>
-                  </tr>
-                  <tr>
-                    <td>df</td>
-                    <td>df</td>
-                    <td>df</td>
-                    <td>df</td>
-                  </tr>
-                </th>
+                {
+                  headerData.map((data)=>{
+                    return (<th class="border border-green-600 bg-gray-400 text-black text-sm">{data}</th>)
+                  })
+                }
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="border border-green-600 ...">Indiana</td>
-                <td class="border border-green-600 ...">Indianapolis</td>
-              </tr>
-              <tr>
-                <td class="border border-green-600 ...">Ohio</td>
-                <td class="border border-green-600 ...">Columbus</td>
-              </tr>
-              <tr>
-                <td class="border border-green-600 ...">Michigan</td>
-                <td class="border border-green-600 ...">Detroit</td>
-              </tr>
+              {
+                rowData.map((data) => {
+                  return (
+                  <tr>
+                    <td class="border border-green-600 text-sm">{data.data1}</td>
+                    <td class="border border-green-600 text-sm">{data.data2}</td>
+                    <td class="border border-green-600 text-sm">{data.data3}</td>
+                  </tr>
+                  )
+                })
+              }
             </tbody>
           </table>
         </div>
