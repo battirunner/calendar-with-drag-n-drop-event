@@ -4,16 +4,17 @@ import Calender from "../components/calender";
 import Grid from "../components/grid";
 import SampleDND from "../components/samplednd";
 import Sample from "../components/sample";
-import DragnDrop from "../components/dragndrop"
+import DragnDrop from "../components/dragndropsample"
 
 
 function App() {
   return (
     <div className="App">
       {/* <Calender /> */}
-        {/* <Grid /> */}
-        <SampleDND />
-        <DragnDrop />
+        <Grid />
+        {/* <DragnDrop /> */}
+        {/* <SampleDND /> */}
+        {/* <DragnDrop /> */}
         {/* <Sample /> */}
     </div>
   );

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Draggable } from 'react-smooth-dnd';
+import { Rnd } from "react-rnd";
+
 const gridData = [
   [
     {
@@ -38,7 +40,18 @@ const gridData = [
     },
   ],
 ];
-
+const style = {
+  display: "block",
+  position: "relative",
+  transform: `translateX(227px) translateY(0)`,
+  userSelect: "auto",
+  top: '0',
+  // alignItems: "center",
+  // justifyContent: "center",
+  border: "solid 1px #ddd",
+  background: "#f0f0f0",
+  // Left: "120px"
+};
 const gridHeaderData = [1, 2, 3, 4, 5, 6];
 
 class SimpleSortableList extends Component {
@@ -74,7 +87,6 @@ class SimpleSortableList extends Component {
                           >
                             {
                               grid.map((data, index) => {
-                                // return (<div id={index} className={`bg-${data.bg} w-${data.width}/6 text-md`} >{data.val}</div>)
                                 return (
                                   data.bg == 'white' ? (
                                     <div key={index} className={`bg-${data.bg} w-${data.width}/6 text-md`} >{data.val}</div>
